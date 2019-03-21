@@ -3,8 +3,10 @@
  * @version 1.0.0
  */
 try {
-	(function(toString) {
+	(function() {
 		'use strict';
+		
+		var _toString = Object.prototype.toString;
 
 		/**
 		 * @name isArray
@@ -13,9 +15,9 @@ try {
 		 * @return {boolean}
 		 */
 		window.isArray = function(value) {
-			return toString.call(value) === '[object Array]';
+			return _toString.call(value) === '[object Array]';
 		};
-	})(Object.prototype.toString);
+	})();
 }catch(e) {
 	console.error(e);
 }
