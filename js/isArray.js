@@ -12,7 +12,7 @@ try {
 		 * @param {*} value
 		 * @return {boolean}
 		 */
-		window.isArray = Array.isArray || function(value) {
+		window.isArray = function(value) {
 			return _toString.call(value) === '[object Array]';
 		};
 	})(Object.prototype.toString);
