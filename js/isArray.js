@@ -14,7 +14,7 @@ try {
 		 * @param {*} value
 		 * @return {boolean}
 		 */
-		window.isArray = function(value) {
+		window.isArray = Array.isArray || function(value) {
 			return _toString.call(value) === '[object Array]';
 		};
 	})();
