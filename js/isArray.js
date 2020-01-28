@@ -5,7 +5,7 @@
 (function() {
 	'use strict';
 	
-	var _toString = Object.prototype.toString;
+	var toStr = Object.prototype.toString;
 
 	/**
 	 * @name isArray
@@ -14,6 +14,6 @@
 	 * @return {boolean}
 	 */
 	window.isArray = function(value) {
-		return _toString.call(value) === '[object Array]';
+		return toStr.call(value) === '[object Array]';
 	};
 })();
